@@ -2610,7 +2610,7 @@ cite {
     .fsHeader .nav-sub .fsNavLevel1 .filterbar {
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        gap: 20px;
     }
 
     .filterbar__item {
@@ -3051,17 +3051,17 @@ cite {
     transform: translate(-50%, -50%);
 }
 
-.menu-button:focus:after,
+/* .menu-button:focus:after,
 .menu-button:focus:before,
 .menu-button:hover:after,
 .menu-button:hover:before {
     background: #fff;
     transition: 0.3s;
-}
-.menu-button:focus:after,
+} */
+/* .menu-button:focus:after,
 .menu-button:hover:after {
     box-shadow: 0 7px 0 0 #fff;
-}
+} */
 .drawer-is-active .menu-button:before {
     margin-top: 0;
     transform: translate(-50%, -50%) rotate(-45deg);
@@ -3298,7 +3298,7 @@ cite {
 @media (min-width: 1000px) {
     .nav-main .fsNavLevel1 {
         border-left: 1px solid hsla(0, 0%, 100%, 0.17);
-        padding: 15px 25px;
+        padding: 15px 0px;
         max-height: calc(100vh - 255px);
         overflow: auto;
         min-height: 280px;
@@ -3463,7 +3463,8 @@ cite {
             left 0.5s,
             max-height 0s;
         max-height: calc(100vh - 255px);
-        left: -80%;
+        left: -88%;
+        padding-right: 30px;
     }
 }
 .nav-main .fsNavLevel1 > li.menu-item-open .expander,
@@ -4105,6 +4106,19 @@ cite {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 65%;
+}
+
+@media screen and (max-width:992px) {
+    
+    .header-utility-container > .fsElementContent {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: center;
+        width: auto;
+    }
 }
 .skip-link {
     margin: 0;
@@ -4645,8 +4659,8 @@ body.fsComposeMode #fsPageWrapper {
 @media (min-width: 900px) {
     .fsLayout .fsDiv {
         float: left;
-        padding-right: 1.25em;
-        padding-left: 1.25em;
+        padding: 0 !important
+      
     }
 }
 .fsLayout > footer,
@@ -4674,16 +4688,8 @@ body.fsComposeMode #fsPageWrapper {
         margin-left: -20px;
     }
 }
-@media (min-width: 800px) {
-    .fsTwoColumnLayoutLast > .fsDiv {
-        width: 50% !important;
-        float: left;
-        padding-right: 1.25em;
-        padding-left: 1.25em;
-        margin-bottom: 0;
-    }
-}
-@media (min-width: 900px) {
+
+/* @media (min-width: 900px) {
     .fsThreeColumnLayout .fsDiv {
         width: 33.33333%;
     }
@@ -4697,7 +4703,7 @@ body.fsComposeMode #fsPageWrapper {
     .fsFourColumnLayout .fsDiv {
         width: 25%;
     }
-}
+} */
 .fsLayout .fsStyleOneThird,
 .fsLayout .fsStyleTwoThirds {
     float: none;
@@ -8958,6 +8964,7 @@ p:last-child .fsToolsList.fsStyleSelectList .fsStyleDefaultButton:last-child {
 .content-card > footer,
 .content-card > header {
     position: relative;
+    text-align: right;
 }
 .content-card a {
     color: #036;
@@ -9240,6 +9247,7 @@ p:last-child .fsToolsList.fsStyleSelectList .fsStyleDefaultButton:last-child {
     #fsEl_49097 {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         & video {
             border-radius: 20px;
         }
@@ -9247,9 +9255,9 @@ p:last-child .fsToolsList.fsStyleSelectList .fsStyleDefaultButton:last-child {
 
     .custom__video {
         width: 50%;
-        height: 100vh;
+        height: fit-content;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         padding-left: 30px;
         padding-right: 25px;
     }
@@ -9263,6 +9271,7 @@ p:last-child .fsToolsList.fsStyleSelectList .fsStyleDefaultButton:last-child {
         gap: 50px;
         & video {
             border-radius: 20px;
+            z-index: 10000;
         }
     }
 
@@ -9345,7 +9354,7 @@ body:not(.fsComposeMode) .hero.hp-hero.animate > header:after {
 @media (min-width: 1440px) {
     .hp-panel.intro {
         padding-top: 182px;
-        padding-bottom: 554px;
+        padding-bottom: 400px;
     }
 }
 .hp-panel.intro:before {
@@ -9947,7 +9956,7 @@ body:not(.fsComposeMode) .hp-panel.intro .intro-text.animate:after {
     .hp-panel.image-buttons > .fsElementContent {
         display: grid;
         grid-gap: 12px 10px;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 }
@@ -13272,7 +13281,7 @@ body:not(.fsComposeMode) .image-button article picture img {
     bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001), #000 90.41%);
     opacity: 0.9;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
+transform: matrix(-1, 0, 0, 1, 0, 0);
     transition: 0.5s;
 }
 .image-button .button-inner > header {
@@ -13288,6 +13297,7 @@ body:not(.fsComposeMode) .image-button article picture img {
     line-height: 1.07143;
     text-transform: uppercase;
     font-weight: 700;
+    text-align: right;
 }
 @media (min-width: 1440px) {
     .image-button .button-inner > header .fsElementTitle {
@@ -13306,6 +13316,7 @@ body:not(.fsComposeMode) .image-button article picture img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
 }
 .image-button figure > .fsResourceLink {
     display: block;
@@ -25049,6 +25060,7 @@ body:not(.fsComposeMode) .filter-search-container .fsSearch.bpa-post-filter-1 {
 .pagination {
     display: -ms-flexbox;
     display: flex;
+    flex-direction: row-reverse;
     padding-left: 0;
     list-style: none;
     border-radius: 0.25rem;
@@ -25092,6 +25104,7 @@ ul {
 }
 .i9-c-pagination .i9-c-page-link__last {
     border-left: 1px solid #c5c7c9;
+    transform: rotate(180deg);
 }
 .i9-c-pagination .i9-c-page-link__first {
     border-right: 1px solid #c5c7c9;
@@ -25160,7 +25173,7 @@ ul {
 }
 .i9-c-article-preview--large {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     margin-bottom: 3rem;
     position: relative;
     min-height: 300px;
@@ -25191,7 +25204,7 @@ ul {
 }
 @media (min-width: 992px) {
     .i9-c-article-preview--large .i9-c-article-preview__content--tags {
-        right: 0;
+        right: -74%;
         top: 0;
         position: relative;
         display: inline-block;
@@ -25310,7 +25323,7 @@ ul {
     content: "";
     position: absolute;
     bottom: -0.5rem;
-    left: 0;
+    right: 0;
     width: 30px;
     height: 4px;
     background-color: #d0af21;
@@ -25502,6 +25515,7 @@ div[data-carousel="one"] .i9-c-article-preview {
     font-weight: normal;
     color: #231f20;
     display: block;
+    text-align: right;
 }
 
 .i9-c-article-preview__content--date {
@@ -25509,6 +25523,7 @@ div[data-carousel="one"] .i9-c-article-preview {
     margin-bottom: 1.5rem;
     font-family: "vazir", sans-serif;
     font-weight: normal;
+    text-align: right;
     color: #231f20;
 }
 
@@ -25520,6 +25535,7 @@ div[data-carousel="one"] .i9-c-article-preview {
     margin-bottom: 2rem !important;
     white-space: normal;
     font-size: 1.3rem !important;
+    text-align: right;
 }
 
 .i9-c-article-preview__image {
@@ -25555,7 +25571,7 @@ div[data-carousel="one"] .i9-c-article-preview {
 
 .wrapper {
     display: flex !important;
-    flex-direction: row;
+    flex-direction: row-reverse;
     min-height: 300px;
     margin-bottom: 3rem;
     position: relative;
@@ -25600,7 +25616,7 @@ div[data-carousel="one"] .i9-c-article-preview {
             color: #fff;
             position: absolute;
             padding: 0.5rem 2rem;
-            left: 0;
+            right: 0;
             text-wrap: nowrap;
             top: 20px;
         }
@@ -25611,6 +25627,7 @@ div[data-carousel="one"] .i9-c-article-preview {
             flex-direction: column;
             .wrapper__two-detail__title {
                 position: relative;
+                text-align: right;
                 color: #ae8e03;
                 display: block;
                 padding-bottom: 1rem;
@@ -25624,7 +25641,7 @@ div[data-carousel="one"] .i9-c-article-preview {
             content: "";
             position: absolute;
             bottom: -0.5rem;
-            left: 0;
+            right: 0;
             width: 30px;
             height: 4px;
             background-color: #d0af21;
@@ -25646,6 +25663,7 @@ div[data-carousel="one"] .i9-c-article-preview {
             font-weight: normal;
             color: #231f20;
             display: block;
+            text-align: right;
         }
     }
 }
@@ -25678,7 +25696,6 @@ div[data-carousel="one"] .i9-c-article-preview {
 #fsEl_59378 {
     display: flex;
     justify-content: center;
-    width: 100%;
     flex-wrap: wrap;
 }
 
@@ -25724,7 +25741,7 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
     .articles_two .fixed {
         position: fixed;
         right: 80px;
-        top: 180px;
+        bottom: 13px;
     }
 }
 
@@ -25913,6 +25930,7 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
     display: flex;
     align-items: start;
     justify-content: space-around;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     gap: 50px;
 
@@ -26057,4 +26075,14 @@ a {
     line-height: 1.4;
     display: block;
     text-align: right;
+}
+
+
+.section_one{
+display: flex;
+
+}
+
+.article_detail{
+    text-align: justify;
 }

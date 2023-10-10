@@ -4277,3 +4277,24 @@ window.addEventListener("scroll", function () {
     }
   });
 });
+
+$(document).ready(function() {
+  // رویداد کلیک بر روی المان‌های li در کلاس slick-dots
+  $('.slick-dots li').on('click', function() {
+      // پیدا کردن المان با کلاس slick-list draggable
+      var $slickList = $('.slick-list.draggable');
+      
+      // دریافت موقعیت عمودی المان نسبت به صفحه
+      var scrollTop = $slickList.offset().top;
+
+      // افزودن 10% به موقعیت عمودی
+      var newScrollTop = scrollTop + (scrollTop * -0.05);
+
+      // اسکرول به موقعیت عمودی با اضافه کردن 10% اضافی
+      $('html, body').animate({
+          scrollTop: newScrollTop
+      }, 1000); // مدت زمان اسکرول به میلی‌ثانیه (در اینجا 1 ثانیه)
+
+      // می‌توانید کد اضافی دیگری که بعد از اسکرول اجرا شود را اینجا اضافه کنید
+  });
+});
