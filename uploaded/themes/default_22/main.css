@@ -4062,6 +4062,7 @@ cite {
 }
 .fsHeader .fsElement {
     margin-bottom: 0;
+    z-index: 450;
 }
 .fsHeader a {
     color: #fff;
@@ -4110,8 +4111,7 @@ cite {
     width: 65%;
 }
 
-@media screen and (max-width:992px) {
-    
+@media screen and (max-width: 992px) {
     .header-utility-container > .fsElementContent {
         display: flex;
         align-items: center;
@@ -4659,8 +4659,7 @@ body.fsComposeMode #fsPageWrapper {
 @media (min-width: 900px) {
     .fsLayout .fsDiv {
         float: left;
-        padding: 0 !important
-      
+        padding: 0 !important;
     }
 }
 .fsLayout > footer,
@@ -13281,7 +13280,7 @@ body:not(.fsComposeMode) .image-button article picture img {
     bottom: 0;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001), #000 90.41%);
     opacity: 0.9;
-transform: matrix(-1, 0, 0, 1, 0, 0);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
     transition: 0.5s;
 }
 .image-button .button-inner > header {
@@ -25888,7 +25887,6 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
     }
 }
 
-
 .hero > section {
     width: 90vw;
     left: 0;
@@ -25907,24 +25905,23 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
     line-height: 1.06061;
     font-size: 8.6842vw;
 }
-.hero__header2-detail h2{
+.hero__header2-detail h2 {
     color: white;
- position: relative;
-    line-height: 1.8        
-    ;text-align:right;
+    position: relative;
+    line-height: 1.8;
+    text-align: right;
     margin-bottom: 25px;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width: 768px) {
     .hero > section {
-        width:100%;
+        width: 100%;
         position: relative;
     }
 
-    .hero__header2-detail h2{
+    .hero__header2-detail h2 {
         font-size: 1rem;
     }
 }
-
 
 #hero__header {
     display: flex;
@@ -25966,7 +25963,6 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
         gap: 20px;
     }
 
-    
     .hero__header2-detail__authors {
         display: flex;
         justify-content: space-between;
@@ -26002,7 +25998,6 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
 .hero__header2-detail h2:hover:after {
     width: 40px;
 }
-
 
 .i9-c-person-block--small {
     display: flex;
@@ -26058,7 +26053,6 @@ i9-u-opacity--hidden.i9-c-btt.i9-u-opacity--visible {
     color: white;
     text-align: right;
     font-weight: normal;
-
 }
 a {
     color: #003a5d;
@@ -26077,12 +26071,120 @@ a {
     text-align: right;
 }
 
-
-.section_one{
-display: flex;
-
+.section_one {
+    display: flex;
 }
 
-.article_detail{
+.article_detail {
     text-align: justify;
 }
+
+@media (min-width: 800px) {
+    .fsTwoColumnLayout > .fsDiv {
+        width: 50%;
+        float: left;
+        padding-right: 1.25em;
+        padding-left: 1.25em;
+        margin-bottom: 0;
+    }
+}
+@media (min-width: 900px) {
+    .fsLayout .fsDiv {
+        float: left;
+        padding-right: 1.25em;
+        padding-left: 1.25em;
+    }
+    .fsLayout .fsDiv {
+        margin-bottom: 20px;
+        width: 100%;
+        float: none;
+    }
+    .fsLayout .fsDiv {
+        min-height: 1px;
+    }
+    .fsTwoColumnLayout > .fsDiv {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .fsLayout {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+}
+@media (min-width: 1000px) {
+    .fsElement {
+        margin-bottom: 40px;
+    }
+}
+@media (min-width: 600px) {
+    .fsElement {
+        margin-bottom: 40px;
+    }
+}
+.fsElement {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 1000px) {
+    .fsFourColumnLayout .fsDiv {
+        width: 25%;
+    }
+}
+@media (min-width: 800px) {
+    .fsFourColumnLayout .fsDiv {
+        width: 50%;
+    }
+}
+@media (min-width: 900px) {
+    .fsLayout .fsDiv {
+        float: left;
+        padding-right: 1.25em;
+        padding-left: 1.25em;
+    }
+}
+
+.fsLayout .fsDiv {
+    min-height: 1px;
+}
+
+
+
+@media screen and (min-width:468px) {
+    .fsFourColumnLayout > .fsDiv {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .fsFourColumnLayout > .fsDiv {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 25%;
+    }
+}
+
+
+@media screen and (min-width:1024px) {
+    .fsFourColumnLayout > .fsDiv {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 25%;
+    }
+}
+
+.icon-grid-container .icon-link:first-child:last-child {
+    max-width: 210px;
+}
+

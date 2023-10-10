@@ -4228,7 +4228,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
     });
-  } else if   (currentPage === "/article.html")  {
+  } else if   (currentPage === "/about.html")  {
 
     // اجرای کد هنگام اسکرول
 window.addEventListener("scroll", function () {
