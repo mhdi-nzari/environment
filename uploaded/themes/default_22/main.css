@@ -167,6 +167,7 @@ h4 {
     text-transform: uppercase;
     color: #242424;
     margin-bottom: 10px;
+    text-align: right;
 }
 h4:not(:first-child) {
     margin-top: 30px;
@@ -198,6 +199,7 @@ h6:not(:first-child) {
 }
 p {
     margin: 0 0 20px;
+    
 }
 body:not(.fsComposeMode) p:last-child {
     margin-bottom: 0;
@@ -5915,6 +5917,7 @@ div[class^="fsConstituentColumnLayout"] {
     color: #373737;
     transition: 0.3s;
     position: relative;
+    text-align: right;
 }
 .fsAccordion .fsPanel > header h2 a,
 .fsTabs .fsPanel > header h2 a {
@@ -5998,11 +6001,12 @@ div[class^="fsConstituentColumnLayout"] {
 }
 .fsPanelIconBefore.fsAccordion .fsPanel > header h2,
 .fsPanelIconBefore.fsTabs .fsPanel > header h2 {
-    padding-left: 55px;
+    padding-right: 55px;
 }
 .fsPanelIconBefore.fsAccordion .fsPanel > header h2:before,
 .fsPanelIconBefore.fsTabs .fsPanel > header h2:before {
-    left: 20px;
+    right: 20px;
+    
 }
 .fsPanelIconAfter.fsAccordion .fsPanel > header h2,
 .fsPanelIconAfter.fsTabs .fsPanel > header h2 {
@@ -8640,7 +8644,8 @@ p:last-child .j-paginate.juicer-button:last-child {
 }
 @media (min-width: 600px) {
     .fsTabs .fsTabsNav {
-        display: block;
+        display: flex;
+        justify-content: end;
     }
 }
 .fsTabs .fsTabsNav li {
